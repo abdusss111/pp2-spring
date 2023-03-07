@@ -22,20 +22,20 @@ elif path_bool == True:
     print("Files:", ', '.join([name for name in os.listdir(path) if not os.path.isdir(os.path.join(path, name))]))
     
 #task 4
-with open(r'/Users/abdussalamabdurakhimov/Desktop/code\week6\demofile.txt', 'r') as file:
+with open(r'/Users/abdussalamabdurakhimov/Desktop/code/pp2/tsis6/demofile.txt', 'r') as file:
     x = len(file.readlines())
     print("Number of lines:", x)
 
 #task 5
 mylist = ['A', 'B', 'C', 'D']
-with open(r'/Users/abdussalamabdurakhimov/Desktop/code\week6\demofile2.txt', 'w') as file:
+with open(r'/Users/abdussalamabdurakhimov/Desktop/code/pp2/tsis6/demofile2.txt', 'w') as file:
     for i in mylist:
         file.write(i + '\n')
 file.close()
 
 #task 6
 for char in ascii_uppercase:
-    file = open(r'/Users/abdussalamabdurakhimov/Desktop/code\week6\{fchar}.txt'.format(fchar = char), 'x')
+    file = open(r'/Users/abdussalamabdurakhimov/Desktop/code/pp2/tsis6/{fchar}.txt'.format(fchar = char), 'x')
     file.close()
 
 #task 7
@@ -44,7 +44,7 @@ with open('demofile.txt', 'r') as file1, open('demofile3.txt', 'a') as file2:
         file2.write(line)
 
 #task 8
-path = r'/Users/abdussalamabdurakhimov/Desktop/code\week6\testfile2.txt'
+path = r'/Users/abdussalamabdurakhimov/Desktop/code/pp2/tsis6/testfile.txt'
 path_bool = os.access(path, os.F_OK)
 if path_bool == False:
     print('Path does not exist')
