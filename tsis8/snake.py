@@ -2,7 +2,7 @@ import pygame
 import time
 import random
 
-snake_speed = 15
+snake_speed = 10
 
 
 WIDTH = 720
@@ -10,7 +10,7 @@ HEIGHT = 480
 
 
 black = pygame.Color(0, 0, 0)
-white = pygame.Color(255, 255, 255)
+white = pygame.Color(255, 0, 0)
 red = pygame.Color(255, 0, 0)
 green = pygame.Color(0, 255, 0)
 blue = pygame.Color(0, 0, 255)
@@ -30,9 +30,9 @@ snake_position = [100, 50]
 
 
 snake_body = [[100, 50],
-              [90, 50],
               [80, 50],
-              [70, 50]
+              [60, 50],
+              [40, 50]
               ]
 
 
@@ -118,13 +118,13 @@ while True :
 
 
     if direction == 'UP' :
-        snake_position[1] -= 10
+        snake_position[1] -= 20
     if direction == 'DOWN' :
-        snake_position[1] += 10
+        snake_position[1] += 20
     if direction == 'LEFT' :
-        snake_position[0] -= 10
+        snake_position[0] -= 20
     if direction == 'RIGHT' :
-        snake_position[0] += 10
+        snake_position[0] += 20
 
 
     snake_body.insert(0, list(snake_position))
