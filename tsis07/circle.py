@@ -8,7 +8,7 @@ def main():
     x = 50
     y = 50
     rad = 25
-    vel = 20
+    vel = 10
     clock = pygame.time.Clock()
     run = True
     
