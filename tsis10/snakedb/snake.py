@@ -39,12 +39,13 @@ pygame.init()
 background = pygame.transform.scale(pygame.image.load(os.path.join('/Users/abdussalamabdurakhimov/Desktop/code/pp2/tsis10/snakedb/asset/snakeee.jpeg')), (500, 600))
 
 SIZE_BLOCK = 20
+YELLOW = (0, 255, 255)
 WHITE = (255, 255, 255)
 FRAME_COLOR = (0, 255, 204)
 HEADER_COLOR = (0, 204, 153)
-SNAKE_COLOR = (0, 102, 0)
+SNAKE_COLOR = (255, 127, 127)
 COUNT_BLOCKS = 20
-BLUE = (204,255,255)
+BLACK = (0, 0, 0)
 RED = (224, 0, 0)
 MARGIN = 1
 HEADER_MARGIN = 70
@@ -140,9 +141,9 @@ def start_the_game():
             for column in range(COUNT_BLOCKS):
 
                 if (row+column)%2==0:
-                    color = BLUE
+                    color = BLACK
                 else:
-                    color = WHITE 
+                    color = YELLOW 
 
                 draw_block(color, row, column)
 

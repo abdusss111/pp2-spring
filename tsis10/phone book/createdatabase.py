@@ -1,13 +1,15 @@
 import psycopg2 as ps
 import csv
+from config import host, user, password, db_name
 
 
 
-conn = ps.connect(host = 'localhost',
-                  dbname = 'postgres',
-                  user = 'postgres',
-                  password = 'Barcelona_1899',
-                  port = '5432' 
+
+conn = ps.connect(
+        host=host,
+        user=user,
+        password=password,
+        database=db_name
 )
 
 cur = conn.cursor()
